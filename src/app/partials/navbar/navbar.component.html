@@ -1,0 +1,57 @@
+<header class="navbar">
+  <!-- Logotipo -->
+  <div class="nav-brand">
+    <div class="logo-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55A1 1 0 0 0 5.58 22h12.84a1 1 0 0 0 .86-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/>
+        <path d="M8.5 2h7"/>
+        <path d="M7 16h10"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <span class="brand-title">RESERVA LAB</span>
+      <span class="brand-subtitle">ESPACIOS ACADÉMICOS</span>
+    </div>
+  </div>
+
+  <!-- Enlaces de navegación -->
+  <nav class="nav-menu">
+    <a routerLink="/home" routerLinkActive="active" class="nav-link">Salas disponibles</a>
+    <a routerLink="/normas" routerLinkActive="active" class="nav-link">Normas de uso</a>
+    <a routerLink="/preguntas" routerLinkActive="active" class="nav-link">Preguntas frecuentes</a>
+  </nav>
+
+  <!-- Botones y Conmutador de Tema -->
+  <div class="nav-actions">
+    <div class="theme-toggle">
+      @if (!isDarkMode) {
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/>
+          <path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/>
+          <path d="M2 12h2"/><path d="M20 12h2"/>
+          <path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+        </svg>
+      } @else {
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+        </svg>
+      }
+
+      <span>{{ isDarkMode ? 'Oscuro' : 'Claro' }}</span>
+
+      <label class="switch">
+        <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme()">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <button class="btn-login" routerLink="/login">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+        <polyline points="10 17 15 12 10 7"/>
+        <line x1="15" y1="12" x2="3" y2="12"/>
+      </svg>
+      Iniciar Sesión
+    </button>
+  </div>
+</header>

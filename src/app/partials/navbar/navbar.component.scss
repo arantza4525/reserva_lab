@@ -1,0 +1,247 @@
+/* ==========================================
+   1. ESTILOS DE LA BARRA DE NAVEGACIÓN
+   ========================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #1a1d20;
+  color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1d20;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  color: #8c9196;
+  letter-spacing: 0.05em;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: #525866;
+  transition: color 0.2s;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #1a1d20;
+  font-weight: 500;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #525866;
+}
+
+/* Switch UI para conmutador de tema */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1a1d20;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #212529;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ==========================================
+   REGLAS RESPONSIVAS (TABLETS Y MÓVILES)
+   ========================================== */
+
+/* 1. Ajustes para Tablets y Pantallas Medianas (<= 992px) */
+@media (max-width: 992px) {
+  /* Navbar: envuelve menú y acciones */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  /* Hero: cambia de 2 columnas horizontales a vertical */
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    gap: 32px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .hero-right {
+    width: 100%; /* La tarjeta ocupa todo el ancho disponible */
+  }
+
+  /* Consulta rápida: apila campos verticalmente */
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-search {
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Beneficios: pasa de 3 columnas a 1 columna */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-subtitle {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: apila contenido */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* 2. Ajustes adicionales para Móviles Pequeños (<= 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .theme-toggle span {
+    display: none; /* Oculta el texto "Claro/Oscuro" en móviles muy pequeños */
+  }
+
+  .features-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-title {
+    font-size: 1.65rem;
+  }
+}

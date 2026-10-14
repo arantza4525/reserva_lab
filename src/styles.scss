@@ -1,0 +1,77 @@
+/* ==========================================
+   ESTILOS GLOBALES PARA TEMA OSCURO
+   ========================================== */
+
+/* Fondo general y color de texto base */
+body.dark-theme,
+body.dark-theme .page-wrapper {
+  background-color: #12161a !important;
+  color: #f1f5f9 !important;
+}
+
+/* Navbar y Footer */
+body.dark-theme .navbar,
+body.dark-theme header {
+  background-color: #1e242b !important;
+  border-bottom-color: #2d3748 !important;
+}
+
+body.dark-theme .footer {
+  background-color: #0d1117 !important;
+}
+
+/* Títulos y textos */
+body.dark-theme .main-title,
+body.dark-theme .section-title,
+body.dark-theme .card-title,
+body.dark-theme .card-heading,
+body.dark-theme .space-name,
+body.dark-theme .brand-title,
+body.dark-theme .question-text,
+body.dark-theme .input-label,
+body.dark-theme .search-section-title {
+  color: #ffffff !important;
+}
+
+body.dark-theme .description,
+body.dark-theme .section-subtitle,
+body.dark-theme .card-description,
+body.dark-theme .subheading,
+body.dark-theme .space-info,
+body.dark-theme .timestamp,
+body.dark-theme .nav-link,
+body.dark-theme .feature-item,
+body.dark-theme .faq-answer {
+  color: #94a3b8 !important;
+}
+
+/* Contenedores y Tarjetas */
+body.dark-theme .preview-card,
+body.dark-theme .feature-card,
+body.dark-theme .search-card,
+body.dark-theme .faq-card {
+  background-color: #1e242b !important;
+  border-color: #2d3748 !important;
+  box-shadow: none !important;
+}
+
+/* Elementos de entrada (Inputs y Selects) */
+body.dark-theme .custom-select,
+body.dark-theme .custom-input {
+  background-color: #12161a !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+}
+
+/* Iconos e identificadores */
+body.dark-theme .space-icon,
+body.dark-theme .feature-icon,
+body.dark-theme .live-badge {
+  background-color: #2a323d !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .status-badge.available,
+body.dark-theme .status-badge.recommended {
+  color: #38bdf8 !important;
+}

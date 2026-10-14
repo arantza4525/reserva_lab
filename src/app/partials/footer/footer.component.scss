@@ -1,0 +1,156 @@
+/* ==========================================
+   5. ESTILOS DEL PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.footer {
+  background-color: #1a1d20;
+  color: #ffffff;
+  padding: 24px 40px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.footer-meta {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-top: 2px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   REGLAS RESPONSIVAS (TABLETS Y MÓVILES)
+   ========================================== */
+
+/* 1. Ajustes para Tablets y Pantallas Medianas (<= 992px) */
+@media (max-width: 992px) {
+  /* Navbar: envuelve menú y acciones */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  /* Hero: cambia de 2 columnas horizontales a vertical */
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    gap: 32px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .hero-right {
+    width: 100%; /* La tarjeta ocupa todo el ancho disponible */
+  }
+
+  /* Consulta rápida: apila campos verticalmente */
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-search {
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Beneficios: pasa de 3 columnas a 1 columna */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-subtitle {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: apila contenido */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* 2. Ajustes adicionales para Móviles Pequeños (<= 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .theme-toggle span {
+    display: none; /* Oculta el texto "Claro/Oscuro" en móviles muy pequeños */
+  }
+
+  .features-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-title {
+    font-size: 1.65rem;
+  }
+}

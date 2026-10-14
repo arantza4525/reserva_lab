@@ -1,0 +1,254 @@
+<div class="page-wrapper">
+   <div class="header-home">
+    <app-navbar></app-navbar>
+  </div>
+<!-- ==========================================
+       SECCIÓN 1: HERO PRINCIPAL
+       ========================================== -->
+  <section class="hero-container">
+
+    <!-- Columna izquierda: Títulos e información general -->
+    <div class="hero-left">
+      <span class="subheading">RESERVAS ACADÉMICAS</span>
+
+      <h1 class="main-title">
+        Reserva el espacio correcto, sin perder tiempo.
+      </h1>
+
+      <p class="description">
+        Encuentra laboratorios y salas de estudio disponibles según tu horario, aforo y ubicación. Confirmación inmediata y sin solapamientos.
+      </p>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <span>Acceso institucional</span>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Disponibilidad en vivo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha: Tarjeta de Vista Previa "Espacios disponibles" -->
+    <div class="hero-right">
+      <div class="preview-card">
+
+        <div class="card-header">
+          <div>
+            <span class="card-subtitle">VISTA PREVIA / HOY</span>
+            <h2 class="card-title">Espacios disponibles</h2>
+          </div>
+          <span class="live-badge">
+            <span class="dot"></span> EN VIVO
+          </span>
+        </div>
+
+        <div class="spaces-list">
+          <!-- Item 1: Laboratorio 2.14 -->
+          <div class="space-item">
+            <div class="space-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20h20"/>
+                <path d="M5 20V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v15"/>
+              </svg>
+            </div>
+            <div class="space-details">
+              <div class="space-name">Laboratorio 2.14</div>
+              <div class="space-info">24 plazas · 16:00–18:00</div>
+            </div>
+            <span class="status-badge available">Disponible</span>
+          </div>
+
+          <!-- Item 2: Sala de estudio B -->
+          <div class="space-item">
+            <div class="space-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20h20"/>
+                <path d="M5 20V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v15"/>
+              </svg>
+            </div>
+            <div class="space-details">
+              <div class="space-name">Sala de estudio B</div>
+              <div class="space-info">8 plazas · 17:30–19:00</div>
+            </div>
+            <span class="status-badge recommended">Recomendada</span>
+          </div>
+
+          <!-- Item 3: Aula multimedia -->
+          <div class="space-item">
+            <div class="space-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20h20"/>
+                <path d="M5 20V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v15"/>
+              </svg>
+            </div>
+            <div class="space-details">
+              <div class="space-name">Aula multimedia</div>
+              <div class="space-info">32 plazas · 18:00–20:00</div>
+            </div>
+            <span class="status-badge available">Disponible</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <span class="timestamp">Actualizado hace 2 min</span>
+          <div class="pagination-dots">
+            <span class="dash active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       SECCIÓN 3: BARRA DE CONSULTA RÁPIDA
+       ========================================== -->
+  <section class="search-section">
+    <h3 class="search-section-title">Consulta rápida</h3>
+
+    <div class="search-card">
+      <!-- Selector de Fecha -->
+      <div class="form-group">
+        <label class="input-label">Fecha</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <select class="custom-select">
+            <option>Mar, 29 sep</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Selector de Hora -->
+      <div class="form-group">
+        <label class="input-label">Hora</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <select class="custom-select">
+            <option>16:00 — 18:00</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Campo de Capacidad / Aforo -->
+      <div class="form-group flex-grow">
+        <label class="input-label">Capacidad / Aforo</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <input type="text" placeholder="Ej. 12 personas" class="custom-input">
+        </div>
+      </div>
+
+      <!-- Botón de Búsqueda -->
+      <button class="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        Buscar disponibilidad
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECCIÓN 4: TARJETAS DE BENEFICIOS Y CARACTERÍSTICAS
+       ========================================== -->
+  <section class="features-section">
+    <div class="section-header">
+      <h2 class="section-title">Diseñado para reservar con confianza</h2>
+      <p class="section-subtitle">
+        Información precisa, recomendaciones útiles y seguimiento automático en cada reserva.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Tarjeta 01: Disponibilidad -->
+      <div class="feature-card">
+        <div class="card-top">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <span class="card-tag">01 / DISPONIBILIDAD</span>
+        </div>
+        <h3 class="card-heading">Sin solapamientos</h3>
+        <p class="card-description">
+          Consulta la ocupación en tiempo real y reserva únicamente franjas verificadas.
+        </p>
+      </div>
+
+      <!-- Tarjeta 02: Recomendación -->
+      <div class="feature-card">
+        <div class="card-top">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span class="card-tag">02 / RECOMENDACIÓN</span>
+        </div>
+        <h3 class="card-heading">La mejor sala para ti</h3>
+        <p class="card-description">
+          Priorizamos cercanía, capacidad y equipamiento para sugerirte el espacio adecuado.
+        </p>
+      </div>
+
+      <!-- Tarjeta 03: Notificaciones -->
+      <div class="feature-card">
+        <div class="card-top">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <span class="card-tag">03 / NOTIFICACIONES</span>
+        </div>
+        <h3 class="card-heading">Avisos automatizados</h3>
+        <p class="card-description">
+          Recibe confirmaciones, recordatorios y cambios de tu reserva por correo institucional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       SECCIÓN 5: PIE DE PÁGINA (FOOTER)
+       ========================================== -->
+  <footer class="footer">
+ <app-footer></app-footer>
+  </footer>
+
+</div>

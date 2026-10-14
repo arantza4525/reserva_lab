@@ -1,0 +1,485 @@
+/* --- CONFIGURACIÓN Y ESTILOS GLOBALES DE LA PÁGINA --- */
+.page-wrapper {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  color: #1a1d20;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* ==========================================
+   2. ESTILOS DE LA SECCIÓN HERO
+   ========================================== */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 580px;
+}
+
+.subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1a1d20;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #525866;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.hero-right {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.preview-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.card-subtitle {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #8c9196;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin: 4px 0 0 0;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f1f3f5;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.live-badge .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #212529;
+  border-radius: 50%;
+}
+
+.spaces-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.space-item:last-child {
+  border-bottom: none;
+}
+
+.space-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  margin-right: 12px;
+}
+
+.space-details {
+  flex: 1;
+}
+
+.space-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.space-info {
+  font-size: 0.75rem;
+  color: #8c9196;
+  margin-top: 2px;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.available, .status-badge.recommended {
+  color: #212529;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #8c9196;
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination-dots .dash {
+  width: 12px;
+  height: 4px;
+  background-color: #212529;
+  border-radius: 2px;
+}
+
+.pagination-dots .dot {
+  width: 4px;
+  height: 4px;
+  background-color: #ced4da;
+  border-radius: 50%;
+}
+
+
+/* ==========================================
+   3. ESTILOS DE CONSULTA RÁPIDA
+   ========================================== */
+.search-section {
+  max-width: 1200px;
+  margin: 20px auto 40px auto;
+  padding: 0 20px;
+}
+
+.search-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin-bottom: 12px;
+}
+
+.search-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.flex-grow {
+  flex: 1;
+}
+
+.input-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a1d20;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.custom-select, .custom-input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #212529;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.btn-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #212529;
+  color: #ffffff;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   4. ESTILOS DE LA SECCIÓN BENEFICIOS
+   ========================================== */
+.features-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  max-width: 320px;
+  text-align: right;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #212529;
+}
+
+.card-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #8c9196;
+  letter-spacing: 0.05em;
+}
+
+.card-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin: 0 0 8px 0;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+
+/* ==========================================
+   REGLAS RESPONSIVAS (TABLETS Y MÓVILES)
+   ========================================== */
+
+/* 1. Ajustes para Tablets y Pantallas Medianas (<= 992px) */
+@media (max-width: 992px) {
+  /* Navbar: envuelve menú y acciones */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  /* Hero: cambia de 2 columnas horizontales a vertical */
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    gap: 32px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .hero-right {
+    width: 100%; /* La tarjeta ocupa todo el ancho disponible */
+  }
+
+  /* Consulta rápida: apila campos verticalmente */
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-search {
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Beneficios: pasa de 3 columnas a 1 columna */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-subtitle {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: apila contenido */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* 2. Ajustes adicionales para Móviles Pequeños (<= 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .theme-toggle span {
+    display: none; /* Oculta el texto "Claro/Oscuro" en móviles muy pequeños */
+  }
+
+  .features-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-title {
+    font-size: 1.65rem;
+  }
+}

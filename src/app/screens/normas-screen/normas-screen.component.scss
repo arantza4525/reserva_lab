@@ -1,0 +1,562 @@
+/* --- CONFIGURACIÓN Y ESTILOS GLOBALES DE LA PÁGINA --- */
+.page-wrapper {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  color: #1a1d20;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   1. ESTILOS DE LA BARRA DE NAVEGACIÓN
+   ========================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #1a1d20;
+  color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1d20;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  color: #8c9196;
+  letter-spacing: 0.05em;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: #525866;
+  transition: color 0.2s;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #1a1d20;
+  font-weight: 500;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: #525866;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1a1d20;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #212529;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   2. ESTILOS DE LA SECCIÓN HERO
+   ========================================== */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 580px;
+}
+
+.subheading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1a1d20;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #525866;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.hero-right {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+.preview-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.card-subtitle {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #8c9196;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin: 4px 0 0 0;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f1f3f5;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.live-badge .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #212529;
+  border-radius: 50%;
+}
+
+.spaces-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.space-item:last-child {
+  border-bottom: none;
+}
+
+.space-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  margin-right: 12px;
+}
+
+.space-details {
+  flex: 1;
+}
+
+.space-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.space-info {
+  font-size: 0.75rem;
+  color: #8c9196;
+  margin-top: 2px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f3f5;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #8c9196;
+}
+
+
+/* ==========================================
+   3. ESTILOS DE GRID DE REGLAS (BENEFICIOS)
+   ========================================== */
+.features-section {
+  max-width: 1200px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  max-width: 320px;
+  text-align: right;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #212529;
+}
+
+.card-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #8c9196;
+  letter-spacing: 0.05em;
+}
+
+.card-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1d20;
+  margin: 0 0 8px 0;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* ==========================================
+   4. ESTILOS DEL PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.footer {
+  background-color: #1a1d20;
+  color: #ffffff;
+  padding: 24px 40px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.footer-meta {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin-top: 2px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   REGLAS RESPONSIVAS (TABLETS Y MÓVILES)
+   ========================================== */
+
+/* 1. Ajustes para Tablets y Pantallas Medianas (<= 992px) */
+@media (max-width: 992px) {
+  /* Navbar: envuelve menú y acciones */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  /* Hero: cambia de 2 columnas horizontales a vertical */
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    gap: 32px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .hero-right {
+    width: 100%; /* La tarjeta ocupa todo el ancho disponible */
+  }
+
+  /* Consulta rápida: apila campos verticalmente */
+  .search-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-search {
+    justify-content: center;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Beneficios: pasa de 3 columnas a 1 columna */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-subtitle {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: apila contenido */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* 2. Ajustes adicionales para Móviles Pequeños (<= 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .theme-toggle span {
+    display: none; /* Oculta el texto "Claro/Oscuro" en móviles muy pequeños */
+  }
+
+  .features-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-title {
+    font-size: 1.65rem;
+  }
+}
