@@ -75,3 +75,111 @@ body.dark-theme .status-badge.available,
 body.dark-theme .status-badge.recommended {
   color: #38bdf8 !important;
 }
+
+/* MODO OSCURO PARA DASHBOARD DE RESERVAS Y TABLAS */
+body.dark-theme {
+  /* Contenedores y Tarjetas del Dashboard */
+  .dashboard-wrapper,
+  .dashboard-container {
+    background-color: #12161a !important;
+    color: #f1f5f9 !important;
+  }
+
+  .filter-card,
+  .calendar-card,
+  .recommendation-banner,
+  .selected-summary {
+    background-color: #1e242b !important;
+    border-color: #2d3748 !important;
+    color: #f1f5f9 !important;
+  }
+
+  /* Encabezados y Textos */
+  .view-header h1,
+  .filter-card h3,
+  .calendar-header h2,
+  .recommend-content h4,
+  .room-col strong,
+  .selected-summary strong,
+  .current-date-title {
+    color: #ffffff !important;
+  }
+
+  .view-header p,
+  .status-live,
+  .filter-hint,
+  .data-notice,
+  .recommend-content p,
+  .room-col span {
+    color: #94a3b8 !important;
+  }
+
+  /* Inputs y Selects */
+  .filter-group input,
+  .filter-group select {
+    background-color: #12161a !important;
+    border-color: #334155 !important;
+    color: #ffffff !important;
+  }
+
+  /* Tabla y Celdas de Horarios */
+  .grid-table {
+    border-color: #2d3748 !important;
+
+    .grid-row {
+      border-bottom-color: #2d3748 !important;
+
+      &.header-row,
+      .time-col {
+        background-color: #161b22 !important;
+        color: #94a3b8 !important;
+      }
+
+      .slot-cell {
+        border-left-color: #2d3748 !important;
+
+        .slot-card {
+          &.disponible {
+            background-color: #1e242b !important;
+            border-color: #334155 !important;
+            &:hover {
+              border-color: #64748b !important;
+            }
+          }
+
+          &.ocupado {
+            background-color: #161b22 !important;
+            border-color: #2d3748 !important;
+          }
+
+          &.seleccionado {
+            background-color: #1e242b !important;
+            border-color: #ffffff !important;
+          }
+
+          .slot-action {
+            color: #e2e8f0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  /* Botones e Interfaz */
+  .view-mode-toggle {
+    background-color: #12161a !important;
+    button {
+      color: #94a3b8 !important;
+      &.active {
+        background-color: #2d3748 !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  .dashboard-footer {
+    background-color: #161b22 !important;
+    border-top: 1px solid #2d3748 !important;
+    color: #94a3b8 !important;
+  }
+}

@@ -1,1 +1,188 @@
-<p>sesion-screen works!</p>
+<div class="page-wrapper">
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <header class="navbar">
+    <div class="nav-brand" routerLink="/home" style="cursor: pointer;">
+      <div class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55A1 1 0 0 0 5.58 22h12.84a1 1 0 0 0 .86-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/>
+          <path d="M8.5 2h7"/>
+          <path d="M7 16h10"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">RESERVA LAB</span>
+        <span class="brand-subtitle">ESPACIOS ACADÉMICOS</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <span class="help-text">¿Necesitas ayuda?</span>
+      <button class="btn-support" routerLink="/preguntas">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        Soporte técnico
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="login-container">
+    
+    <!-- COLUMNA IZQUIERDA: INFORMACIÓN -->
+    <div class="login-info">
+      <h1 class="main-title">Acceso seguro a tus reservas.</h1>
+      <p class="description">
+        Autentícate con tu cuenta institucional para consultar, crear y gestionar reservas de espacios académicos.
+      </p>
+
+      <div class="info-list">
+        <div class="info-item">
+          <div class="step-badge">01</div>
+          <div class="item-text">
+            <h4>Identidad institucional</h4>
+            <p>Validación de correo y sesión.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="step-badge">02</div>
+          <div class="item-text">
+            <h4>Acceso por rol</h4>
+            <p>Permisos según perfil académico.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="step-badge">03</div>
+          <div class="item-text">
+            <h4>Reservas sincronizadas</h4>
+            <p>Cambios visibles al instante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: TARJETA DE LOGIN -->
+    <div class="login-card-wrapper">
+      <div class="login-card">
+        
+        <div class="card-header">
+          <div class="card-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55A1 1 0 0 0 5.58 22h12.84a1 1 0 0 0 .86-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/>
+              <path d="M8.5 2h7"/>
+              <path d="M7 16h10"/>
+            </svg>
+          </div>
+          <h2>Acceso al Sistema</h2>
+          <p class="subtitle">Usa tus credenciales institucionales</p>
+        </div>
+
+        <!-- Banner de Error (Controlado por TypeScript) -->
+        @if (showError) {
+          <div class="alert-box">
+            <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <div class="alert-content">
+              <p>• Credenciales inválidas. Verifica tus datos.</p>
+              <p>• El token o la sesión ya no son válidos.</p>
+            </div>
+          </div>
+        }
+
+        <!-- Formulario -->
+        <form (ngSubmit)="onSubmit($event)" class="login-form">
+          
+<!-- Campo Correo -->
+          <div class="form-group">
+            <label for="correo" class="form-label">Correo institucional</label>
+            <div class="input-container">
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <input 
+                type="email" 
+                id="correo"
+                name="correo" 
+                [(ngModel)]="correo" 
+                required 
+                placeholder="usuario@universidad.edu"
+                class="form-input">
+            </div>
+          </div>      
+          <!-- Campo Contraseña -->
+
+<div class="form-group">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-container">
+              <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input 
+                [type]="showPassword ? 'text' : 'password'" 
+                id="password"
+                name="password" 
+                [(ngModel)]="password" 
+                required 
+                placeholder="••••••••"
+                class="form-input">
+              
+              <button 
+                type="button" 
+                class="btn-toggle-pass" 
+                (click)="togglePasswordVisibility()"
+                tabindex="-1">
+                @if (showPassword) {
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                } @else {
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                }
+              </button>
+            </div>
+          </div>
+
+          <!-- Opciones adicionales -->
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              <span>Recordar sesión</span>
+            </label>
+            <a href="#" class="forgot-link" (click)="$event.preventDefault()">¿Olvidaste tu contraseña?</a>
+          </div>
+
+    <!-- Botón de Ingresar Personalizado -->
+      <button type="submit" class="btn-submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+        Ingresar
+      </button>
+
+          <!-- Botón de Registrarse -->
+          <div class="register-option">
+            <span>¿Aún no tienes cuenta?</span>
+            <button type="button" class="btn-register" routerLink="/registro">
+              Registrarse
+            </button>
+          </div>
+
+        </form>
+
+        <div class="card-footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Conexión segura · Sesión protegida</span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+</div>

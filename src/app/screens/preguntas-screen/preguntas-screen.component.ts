@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../partials/navbar/navbar.component';
-import { FooterComponent } from '../../partials/footer/footer.component';
+import { FooterComponent } from '@partials/footer/footer.component';
+import { NavbarComponent } from '@partials/navbar/navbar.component';
+
 
 interface FaqItem {
   id: number;
@@ -9,16 +10,15 @@ interface FaqItem {
   isOpen: boolean;
 }
 
+
 @Component({
   selector: 'app-preguntas-screen',
   standalone: true,
-  imports: [
-    NavbarComponent,
-    FooterComponent
-  ],
+  imports: [NavbarComponent, FooterComponent],
   templateUrl: './preguntas-screen.component.html',
   styleUrls: ['./preguntas-screen.component.scss']
 })
+
 export class PreguntasScreenComponent {
   faqs: FaqItem[] = [
     {
